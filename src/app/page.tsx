@@ -1,4 +1,6 @@
 import { memo } from 'react';
+import './styles.scss';
+
 
 import {
   HomeSection,
