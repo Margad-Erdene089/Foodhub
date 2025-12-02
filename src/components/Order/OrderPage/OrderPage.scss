@@ -1,0 +1,95 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
+
+$order-max-width: 1120px;
+
+.order-page {
+  padding: 140px 20px 160px;
+  max-width: $order-max-width;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+
+  &__hero {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    text-align: left;
+
+    h1 {
+      font-size: clamp(32px, 5vw, 44px);
+      font-weight: 600;
+      color: $space-cadet;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: $rhythm;
+      max-width: 560px;
+    }
+  }
+
+  &__back {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: $rhythm;
+    width: fit-content;
+    transition: $default-transition;
+
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    &:hover {
+      color: $space-cadet;
+    }
+  }
+
+  &__layout {
+    display: grid;
+    gap: 32px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &--empty {
+    align-items: center;
+
+    .order-page__hero {
+      text-align: center;
+      align-items: center;
+      gap: 20px;
+    }
+  }
+}
+
+@include tablet-up {
+  .order-page {
+    padding-inline: 30px;
+
+    &__layout {
+      grid-template-columns: 1fr 320px;
+      align-items: start;
+    }
+  }
+}
+
+@include laptop-up {
+  .order-page {
+    padding-inline: 40px;
+
+    &__layout {
+      gap: 40px;
+      grid-template-columns: minmax(0, 1fr) 340px;
+    }
+  }
+}

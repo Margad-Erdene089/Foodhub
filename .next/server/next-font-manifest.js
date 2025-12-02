@@ -1,0 +1,1 @@
+self.__NEXT_FONT_MANIFEST="{\"pages\":{},\"app\":{\"/home/margad/Documents/web/foodhub-main/src/app/layout\":[\"static/media/e61861fecd41586c-s.p.woff2\",\"static/media/0a86735c6520d94f-s.p.woff2\"]},\"appUsingSizeAdjust\":true,\"pagesUsingSizeAdjust\":false}"
